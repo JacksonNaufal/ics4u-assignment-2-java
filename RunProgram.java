@@ -12,7 +12,7 @@
 
 import java.util.Scanner;
 /**
- * This is a rock, paper, scissors program.
+ * This is a run program.
  */
 
 final class RunProgram {
