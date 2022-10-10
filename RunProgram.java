@@ -1,13 +1,13 @@
 /*
 *
-* This is a standared rock, paper, scissors program
-* regular game, regular rules with a try and catch.
+* This is a standared run program that finds the most used
+* character in a userInputted string.
 *
 * @author  Jackson Naufal
 * @version 1.0
-* @since   2020-01-01
+* @since   2020-10-10
 *
-* This is a rock paper scissors program.
+* This is a run program.
 */
 
 import java.util.Scanner;
@@ -47,17 +47,27 @@ final class RunProgram {
         // a string that the userInputtedArray.
         for (char userSingleInput: userInput.toCharArray()) {
 
+            // checks previos charactors, if they equal eachother the counter
+            // will go up by 1.
             if (userSingleInput == previous) {
                 total++;
+
+            // if there are no charactors that share a run, the
+            // run will be 1.
             } else {
                 total = 1;
                 previous = userSingleInput;
             }
 
+            // the count is the total run that is found
+            // within the string inputted.
             if (total > count) {
                 count = total;
             }
         }
+
+        // returns the total run in count to the main
+        // function to output the result.
         return count;
 
     }
@@ -69,16 +79,19 @@ final class RunProgram {
     */
 
     public static void main(final String[] args) {
-        // identifying the strings.
 
-        // rock, paper and scissors
-        // max number in the Math.Random generator.
+        // this gets the users string that they input
+        // to get the string
         final Scanner userWord = new Scanner(System.in);
         System.out.print("Enter your run: ");
+
+        // conerts the word inputted to userInput.
         final String userInput = userWord.nextLine();
 
+        // gets the maxRun of the program.
         final int maxRun = runCalculation(userInput);
 
+        // outputs the maxRun of the program.
         System.out.println(maxRun);
 
     }
