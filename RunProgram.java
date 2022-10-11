@@ -12,7 +12,7 @@
 
 import java.util.Scanner;
 /**
- * This is a run program.
+ * This is a rock, paper, scissors program.
  */
 
 final class RunProgram {
@@ -80,6 +80,13 @@ final class RunProgram {
 
     public static void main(final String[] args) {
 
+        // This is for visual effects when the user
+        // first opens up the program this is
+        // what they will see.
+        System.out.println("This is a run program!");
+        System.out.println("This program will calculate the run of STRINGS!");
+        System.out.println("STRING EX, xxyyyz, this STRING has a run of 3!");
+
         // this gets the users string that they input
         // to get the string
         final Scanner userWord = new Scanner(System.in);
@@ -92,8 +99,10 @@ final class RunProgram {
         final int maxRun = runCalculation(userInput);
 
         // outputs the maxRun of the program.
-        System.out.println(maxRun);
+        System.out.println("The highest run is " + maxRun + "!");
+
+        // End of program
+        System.out.println("\nDone!");
 
     }
 }
-
